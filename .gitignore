@@ -1,0 +1,6 @@
+/config.json
+settings.py
+db.sqlite3
+__pycache__
+build_files.sh
+vercel.json
