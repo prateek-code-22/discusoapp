@@ -34,19 +34,17 @@ pip install -r requirements.txt
 Apply the database migrations to set up the required tables.
 ```
 python manage.py migrate
-
 ```
 
 4. Start the development server
 
-
 Start the Django development server to run the chat application locally.
 ```
 python manage.py runserver
-
 ```
 
 5. Access the application
+
 
 Open your web browser and visit http://localhost:8000 to access the chat application.
 
