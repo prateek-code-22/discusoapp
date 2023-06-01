@@ -9,6 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.views.decorators.cache import cache_page
+
 
 def loginPage(request):
 
@@ -64,6 +66,8 @@ def registerPage(request):
 
     return render(request,'base/login_register.html', {'form': form})
 
+
+@cache_page(60 * 15)
 def home(request):
     q = request.GET.get('q') if request.GET.get('q')!=None else ''
     
